@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xin Wang — Academic Homepage</title>
+  <meta name="description" content="Xin Wang — Ph.D. Student in Transportation Engineering at the University of Washington. Research: machine unlearning, data poisoning, optimization, PINNs, trustworthy ITS." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0c10;--card:#111217;--ink:#e6e7eb;--muted:#aeb3bd;--brand:#5da9ff;--accent:#8ae5c2}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#0b0c10 0%, #0e1117 65%, #111217 100%)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1050px;margin:0 auto;padding:28px 18px 80px}
+    header{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin:12px 0 26px}
+    .avatar{width:120px;height:120px;border-radius:18px;background:#1b1e26;display:flex;align-items:center;justify-content:center;font-weight:700;color:#9fb4ff;border:1px solid #222}
+    .title h1{margin:0;font-weight:800;letter-spacing:.2px}
+    .title h2{margin:6px 0 10px;font-weight:500;color:var(--muted)}
+    .pillbar{display:flex;flex-wrap:wrap;gap:10px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #222;border-radius:999px;background:#12141a;color:var(--ink);font-size:14px}
+    .pill svg{opacity:.8}
+    section{margin:28px 0}
+    h3{margin:0 0 12px;font-size:20px}
+    .grid{display:grid;gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border:1px solid #1c1e26;border-radius:14px;padding:18px}
+    .list{list-style:none;margin:0;padding:0}
+    .list li{padding:10px 0;border-top:1px dashed #252733}
+    .list li:first-child{border-top:0}
+    .pub u{ text-underline-offset: 2px }
+    .two{display:grid;grid-template-columns:140px 1fr;gap:14px}
+    .tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#151823;border:1px solid #232634;color:#c6c9d1;font-size:12px}
+    footer{margin-top:36px;color:#9aa3ad;font-size:14px}
+    .row{display:flex;flex-wrap:wrap;gap:10px}
+    .small{font-size:14px;color:var(--muted)}
+    .btn{display:inline-block;background:linear-gradient(135deg,var(--brand),#7ab8ff);color:#061018;padding:10px 14px;border-radius:10px;font-weight:700}
+    .btn:hover{filter:brightness(1.05)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">XW</div>
+      <div class="title">
+        <h1>Xin Wang</h1>
+        <h2>Ph.D. Student, Transportation Engineering — University of Washington</h2>
+        <div class="pillbar">
+          <a class="pill" href="mailto:xinw22@uw.edu" title="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg> xinw22@uw.edu</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=eNRwi3QAAAAJ" target="_blank" rel="noopener">📖 Google Scholar</a>
+          <a class="pill" href="#cv" title="Scroll to CV">📝 CV (on this page)</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="card">
+      <h3>About</h3>
+      <p class="small">I work on trustworthy and optimization-driven machine learning for intelligent transportation systems (ITS), focusing on <strong>machine unlearning</strong>, <strong>data poisoning</strong>, <strong>variational inequalities</strong>, and <strong>PINNs</strong>. My work spans theory (DIF, set-valued sensitivity), algorithms, and applied spatiotemporal forecasting.</p>
+    </section>
+
+    <section id="interests" class="grid">
+      <div class="card">
+        <h3>Research Interests</h3>
+        <div class="two">
+          <div><span class="tag">ML for Transportation</span></div>
+          <ul class="list small">
+            <li>Data poisoning & adversarial robustness in spatiotemporal forecasting</li>
+            <li>Machine unlearning & constrained learning for intelligent systems</li>
+            <li>Variational inequalities, influence functions, sensitivity analysis</li>
+          </ul>
+        </div>
+        <div class="two">
+          <div><span class="tag">Physics + Optimization AI</span></div>
+          <ul class="list small">
+            <li>PINNs and multi-physics modeling</li>
+            <li>Optimization for robust & reliable ITS applications</li>
+            <li>Trustworthy AI and uncertainty quantification</li>
+          </ul>
+        </div>
+        <div class="two">
+          <div><span class="tag">Cybersecurity in ITS</span></div>
+          <ul class="list small">
+            <li>Adversarial attacks on traffic forecasting models</li>
+            <li>Robust control & defenses for signal control / ramp metering</li>
+            <li>Unlearning for incident response & resilient recovery</li>
+            <li>Trustworthy AI for CAVs and V2X communications</li>
+          </ul>
+        </div>
+        <div class="two">
+          <div><span class="tag">Optimization & Learning</span></div>
+          <ul class="list small">
+            <li>VI & KKT frameworks for constrained ML</li>
+            <li>Directional Influence Functions (DIF)</li>
+            <li>Optimization-based machine unlearning with guarantees</li>
+            <li>Multi-objective & robust optimization in transportation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="cv" class="card">
+        <h3>Education</h3>
+        <ul class="list small">
+          <li><strong>Ph.D., Transportation Engineering</strong>, University of Washington, 2022—present — Advisor: Prof. Xuegang (Jeff) Ban</li>
+          <li><strong>M.S., Statistics</strong>, Renmin University of China, 2020–2022</li>
+          <li><strong>B.S., Applied Mathematics</strong>, Central South University, 2016–2020</li>
+        </ul>
+        <h3 style="margin-top:18px">Experience</h3>
+        <ul class="list small">
+          <li><strong>Research Assistant</strong>, University of Washington, 2022—present</li>
+          <li><strong>Teaching Assistant</strong>, CET 513: Optimization in Transportation (Autumn 2024)</li>
+          <li><strong>ML Engineer Intern</strong>, Baidu Inc., Jan–May 2021 — Multi-objective ranking (PE‑LTR, NSGA‑II) improving NDCG and CTR</li>
+        </ul>
+        <h3 style="margin-top:18px">Academic Service</h3>
+        <ul class="list small">
+          <li>Reviewer: Transportation Research Part C, TRB Annual Meeting, AAAI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Publications</h3>
+      <ul class="list small pub">
+        <li><strong>Journal</strong></li>
+        <li>Wang, Feilong, <u>Xin Wang</u>, Hong, Yuan, Rockafellar, R. Tyrrell, Ban, Xuegang Jeff. <em>Data poisoning attacks on traffic state estimation and prediction.</em> Transportation Research Part C, 168 (2024): 104577.</li>
+        <li>Wang, Feilong, <u>Xin Wang</u>, Ban, Xuegang Jeff. <em>Data poisoning attacks in intelligent transportation systems: A survey.</em> Transportation Research Part C, 165 (2024): 104750.</li>
+        <li><strong>Conference</strong></li>
+        <li><u>Xin Wang</u>, Feilong Wang, Xuegang Jeff Ban. <em>Set‑Valued Sensitivity Analysis of Deep Neural Networks.</em> AAAI 2025, 39(20): 21304–21311.</li>
+        <li>Feilong Wang, <u>Xin Wang</u>, Jeff Ban. <em>Infrastructure‑enabled Defense Methods against Data Poisoning Attacks on Traffic State Estimation and Prediction.</em> TRC‑30, 2025.</li>
+        <li><strong>Under Review / Submitted</strong></li>
+        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, Xuegang Ban. <em>Transferability in Data Poisoning Attacks on Spatiotemporal Traffic Forecasting Models.</em> SSRN 4827065 (2024). Submitted to TR‑C.</li>
+        <li><u>Xin Wang</u>, R. Tyrrell Rockafellar, et al. <em>Machine Unlearning of Traffic State Estimation and Prediction.</em> arXiv:2507.17984 (2025). Submitted to ISTTT.</li>
+        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, R. Tyrrell Rockafellar, et al. <em>Model‑Targeted Data Poisoning Attacks against ITS Applications with Provable Convergence.</em> arXiv:2505.03966 (2025). Submitted to AAAI.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Invited Talks & Guest Lectures</h3>
+      <ul class="list small">
+        <li><strong>ISTTT 2025</strong> — Data Poisoning Attacks on Traffic State Estimation and Prediction</li>
+        <li><strong>TRB 2025</strong> — A Review of Data Poisoning Attacks in Intelligent Transportation Systems</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="row">
+        <span>© Xin Wang</span>
+        <span>•</span>
+        <span>University of Washington</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
