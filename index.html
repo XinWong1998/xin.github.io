@@ -31,10 +31,15 @@
     .list li:first-child{border-top:0}
     .pub u{ text-underline-offset: 2px }
     .two{display:grid;grid-template-columns:140px 1fr;gap:14px}
+
+    /* 新的 tag 样式 */
     .tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#151823;border:1px solid #232634;color:#c6c9d1;font-size:12px}
-    footer{margin-top:36px;color:#9aa3ad;font-size:14px}
-    .row{display:flex;flex-wrap:wrap;gap:10px}
+    .tag.badge-ai{background:#12172a;border-color:#223050;color:#aec4ff}
+    .tag.badge-app{background:#172a1d;border-color:#294233;color:#a6e8c7}
+
     .small{font-size:14px;color:var(--muted)}
+    .row{display:flex;flex-wrap:wrap;gap:10px}
+    footer{margin-top:36px;color:#9aa3ad;font-size:14px}
     .btn{display:inline-block;background:linear-gradient(135deg,var(--brand),#7ab8ff);color:#061018;padding:10px 14px;border-radius:10px;font-weight:700}
     .btn:hover{filter:brightness(1.05)}
   </style>
@@ -56,34 +61,30 @@
 
     <section id="about" class="card">
       <h3>About</h3>
-      <p class="small">I work on trustworthy and optimization-driven machine learning for intelligent transportation systems (ITS), focusing on <strong>machine unlearning</strong>, <strong>data poisoning</strong>, <strong>variational inequalities</strong>, and <strong>PINNs</strong>. My work spans theory (Influence function, set-valued sensitivity), algorithms, and applied spatiotemporal forecasting.</p>
+      <p class="small">I work on trustworthy and optimization-driven machine learning for intelligent transportation systems (ITS), focusing on <strong>machine unlearning</strong>, <strong>data poisoning</strong>, <strong>variational inequalities</strong>, and <strong>PINNs</strong>. My work spans theory (influence function, set-to-set stability), algorithms, and applied spatiotemporal forecasting.</p>
     </section>
 
+    <!-- Research Focus: AI & Transportation -->
     <section id="interests" class="grid">
       <div class="card">
-        <h3>Research Interests</h3>
+        <h3>Research Focus</h3>
+
         <div class="two">
-          <div><span class="tag">ML for Transportation</span></div>
+          <div><span class="tag badge-ai">AI</span></div>
           <ul class="list small">
-            <li>Data poisoning & adversarial robustness in spatiotemporal forecasting</li>
-            <li>Machine unlearning & constrained learning for intelligent systems</li>
+            <li>Set-to-set analysis & Lipschitz-like stability</li>
+            <li>Machine unlearning on constrained learning</li>
             <li>Variational inequalities, influence functions, sensitivity analysis</li>
-          </ul>
-        </div>
-        <div class="two">
-          <div><span class="tag">Physics + Optimization AI</span></div>
-          <ul class="list small">
             <li>PINNs and multi-physics modeling</li>
-            <li>Optimization for robust & reliable ITS applications</li>
-            <li>Trustworthy AI and uncertainty quantification</li>
           </ul>
         </div>
+
         <div class="two">
-          <div><span class="tag">Cybersecurity in ITS</span></div>
+          <div><span class="tag badge-app">Transportation</span></div>
           <ul class="list small">
-            <li>Adversarial attacks on traffic forecasting models</li>
-            <li>Robust control & defenses for signal control / ramp metering</li>
-            <li>Unlearning for incident response & resilient recovery</li>
+            <li>Adversarial data poisoning on traffic forecasting</li>
+            <li>Robust defenses for signal control / ramp metering</li>
+            <li>Unlearning for trajectory data and incident response</li>
             <li>Trustworthy AI for CAVs and V2X communications</li>
           </ul>
         </div>
@@ -100,7 +101,7 @@
         <ul class="list small">
           <li><strong>Research Assistant</strong>, University of Washington, 2022—present</li>
           <li><strong>Teaching Assistant</strong>, CET 513: Optimization in Transportation (Autumn 2024)</li>
-          <li><strong>ML Engineer Intern</strong>, Baidu Inc., Jan–May 2021 — Multi-objective ranking (PE‑LTR, NSGA‑II) improving NDCG and CTR</li>
+          <li><strong>ML Engineer Intern</strong>, Baidu Inc., Jan–May 2021 — Multi-objective ranking (PE-LTR, NSGA-II) improving NDCG and CTR</li>
         </ul>
         <h3 style="margin-top:18px">Academic Service</h3>
         <ul class="list small">
@@ -109,19 +110,20 @@
       </div>
     </section>
 
+    <!-- Publications grouped by AI / Transportation -->
     <section class="card">
       <h3>Publications</h3>
       <ul class="list small pub">
-        <li><strong>Journal</strong></li>
+        <li><span class="tag badge-ai">AI</span></li>
+        <li><u>Xin Wang</u>, Feilong Wang, Xuegang Jeff Ban. <em>Set-Valued Sensitivity Analysis of Deep Neural Networks.</em> AAAI 2025, 39(20): 21304–21311.</li>
+        <li><u>Xin Wang</u>, R. Tyrrell Rockafellar, et al. <em>Machine Unlearning of Traffic State Estimation and Prediction.</em> arXiv:2507.17984 (2025). Submitted to ISTTT.</li>
+        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, R. Tyrrell Rockafellar, et al. <em>Model-Targeted Data Poisoning Attacks against ITS Applications with Provable Convergence.</em> arXiv:2505.03966 (2025). Submitted to AAAI.</li>
+
+        <li><span class="tag badge-app">Transportation</span></li>
         <li>Wang, Feilong, <u>Xin Wang</u>, Hong, Yuan, Rockafellar, R. Tyrrell, Ban, Xuegang Jeff. <em>Data poisoning attacks on traffic state estimation and prediction.</em> Transportation Research Part C, 168 (2024): 104577.</li>
         <li>Wang, Feilong, <u>Xin Wang</u>, Ban, Xuegang Jeff. <em>Data poisoning attacks in intelligent transportation systems: A survey.</em> Transportation Research Part C, 165 (2024): 104750.</li>
-        <li><strong>Conference</strong></li>
-        <li><u>Xin Wang</u>, Feilong Wang, Xuegang Jeff Ban. <em>Set‑Valued Sensitivity Analysis of Deep Neural Networks.</em> AAAI 2025, 39(20): 21304–21311.</li>
-        <li>Feilong Wang, <u>Xin Wang</u>, Jeff Ban. <em>Infrastructure‑enabled Defense Methods against Data Poisoning Attacks on Traffic State Estimation and Prediction.</em> TRC‑30, 2025.</li>
-        <li><strong>Under Review / Submitted</strong></li>
-        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, Xuegang Ban. <em>Transferability in Data Poisoning Attacks on Spatiotemporal Traffic Forecasting Models.</em> SSRN 4827065 (2024). Submitted to TR‑C.</li>
-        <li><u>Xin Wang</u>, R. Tyrrell Rockafellar, et al. <em>Machine Unlearning of Traffic State Estimation and Prediction.</em> arXiv:2507.17984 (2025). Submitted to ISTTT.</li>
-        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, R. Tyrrell Rockafellar, et al. <em>Model‑Targeted Data Poisoning Attacks against ITS Applications with Provable Convergence.</em> arXiv:2505.03966 (2025). Submitted to AAAI.</li>
+        <li>Feilong Wang, <u>Xin Wang</u>, Jeff Ban. <em>Infrastructure-enabled Defense Methods against Data Poisoning Attacks on Traffic State Estimation and Prediction.</em> TRC-30, 2025.</li>
+        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, Xuegang Ban. <em>Transferability in Data Poisoning Attacks on Spatiotemporal Traffic Forecasting Models.</em> SSRN 4827065 (2024). Submitted to TR-C.</li>
       </ul>
     </section>
 
