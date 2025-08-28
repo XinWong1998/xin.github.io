@@ -8,39 +8,115 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0b0c10;--card:#111217;--ink:#e6e7eb;--muted:#aeb3bd;--brand:#5da9ff;--accent:#8ae5c2}
+    /* ===== Light Theme Colors ===== */
+    :root{
+      --bg:#f7f8fb;         /* page background */
+      --card:#ffffff;       /* card background */
+      --ink:#111217;        /* primary text */
+      --muted:#5c6370;      /* secondary text */
+      --brand:#0b57d0;      /* link/brand blue */
+      --accent:#0a7c66;     /* accent green */
+      --line:#e6e9f0;       /* hairline/borders */
+      --chip-ink:#1b2430;   /* tag text */
+    }
+
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#0b0c10 0%, #0e1117 65%, #111217 100%)}
+    html,body{
+      margin:0; padding:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
+
     .wrap{max-width:1050px;margin:0 auto;padding:28px 18px 80px}
-    header{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin:12px 0 26px}
-    .avatar {width: 120px;height: 120px;border-radius: 50%;border: 1px solid #222;object-fit: cover}
+
+    header{
+      display:grid;grid-template-columns:120px 1fr;
+      gap:18px;align-items:center;margin:12px 0 26px
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:50%;
+      border:1px solid var(--line);object-fit:cover;background:#fff
+    }
     .title h1{margin:0;font-weight:800;letter-spacing:.2px}
     .title h2{margin:6px 0 10px;font-weight:500;color:var(--muted)}
+
     .pillbar{display:flex;flex-wrap:wrap;gap:10px}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #222;border-radius:999px;background:#12141a;color:var(--ink);font-size:14px}
-    .pill svg{opacity:.8}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border:1px solid var(--line);
+      border-radius:999px;background:#f4f7ff;color:var(--ink);
+      font-size:14px
+    }
+    .pill svg{opacity:.75}
+
     section{margin:28px 0}
     h3{margin:0 0 12px;font-size:20px}
     .grid{display:grid;gap:16px}
     @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    .card{background:var(--card);border:1px solid #1c1e26;border-radius:14px;padding:18px}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 1px 2px rgba(16,24,40,.04)
+    }
+
     .list{list-style:none;margin:0;padding:0}
-    .list li{padding:10px 0;border-top:1px dashed #252733}
+    .list li{padding:10px 0;border-top:1px dashed var(--line)}
     .list li:first-child{border-top:0}
+
     .pub u{ text-underline-offset: 2px }
     .two{display:grid;grid-template-columns:140px 1fr;gap:14px}
 
-    /* 新的 tag 样式 */
-    .tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#151823;border:1px solid #232634;color:#c6c9d1;font-size:12px}
-    .tag.badge-ai{background:#12172a;border-color:#223050;color:#aec4ff}
-    .tag.badge-app{background:#172a1d;border-color:#294233;color:#a6e8c7}
+    /* ===== Tag Chips (Light) ===== */
+    .tag{
+      display:inline-block;
+      padding:3px 10px;
+      border-radius:999px;
+      font-size:12px;
+      border:1px solid var(--line);
+      color:var(--chip-ink);
+      background:#f5f7fa
+    }
+    /* AI: cool blue */
+    .tag.badge-ai{
+      background:#eaf2ff;              /* light blue fill */
+      border-color:#cfe1ff;            /* soft border */
+      color:#0b3d91;                   /* navy text */
+    }
+    /* Transportation: soft green */
+    .tag.badge-app{
+      background:#e9f7f2;
+      border-color:#c9eade;
+      color:#0a5b49;
+    }
+    /* Paper link chip */
+    .tag.badge-paper{
+      background:#eef1f6;
+      border-color:#d8deea;
+      color:#1b3a72;
+      font-size:11px;
+      padding:2px 8px;
+    }
 
     .small{font-size:14px;color:var(--muted)}
     .row{display:flex;flex-wrap:wrap;gap:10px}
-    footer{margin-top:36px;color:#9aa3ad;font-size:14px}
-    .btn{display:inline-block;background:linear-gradient(135deg,var(--brand),#7ab8ff);color:#061018;padding:10px 14px;border-radius:10px;font-weight:700}
+
+    footer{margin-top:36px;color:#727a86;font-size:14px}
+
+    .btn{
+      display:inline-block;
+      background:linear-gradient(135deg,#0b57d0,#2d7ef7);
+      color:#ffffff;
+      padding:10px 14px;border-radius:10px;font-weight:700
+    }
     .btn:hover{filter:brightness(1.05)}
   </style>
 </head>
@@ -52,35 +128,40 @@
         <h1>Xin Wang</h1>
         <h2>Ph.D. Student, Transportation Engineering — University of Washington</h2>
         <div class="pillbar">
-          <a class="pill" href="mailto:xinw22@uw.edu" title="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg> xinw22@uw.edu</a>
+          <a class="pill" href="mailto:xinw22@uw.edu" title="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+            xinw22@uw.edu
+          </a>
           <a class="pill" href="https://scholar.google.com/citations?user=eNRwi3QAAAAJ" target="_blank" rel="noopener">📖 Google Scholar</a>
           <a class="pill" href="CV_Xin.pdf" target="_blank" rel="noopener">📄 Download CV</a>
         </div>
       </div>
     </header>
 
-    <!-- About 部分替换 -->
+    <!-- About -->
     <section id="about" class="card">
       <h3>About</h3>
       <p class="small">
-        I study <strong>AI fundamentals</strong> for reliable and scalable machine learning. 
-        My research focuses on <strong>set-to-set stability</strong> in deep neural networks, 
-        <strong>machine unlearning</strong> through variational inequalities, and 
-        <strong>adversarial robustness</strong> with an emphasis on transferability. 
-        These directions address <em>core technologies</em> in optimization and trustworthiness, 
-        with applications to spatiotemporal forecasting and intelligent transportation systems.
+        My research is about making <strong>AI safer and more reliable</strong>, with applications in transportation, for example:
       </p>
+      <ul class="small">
+        <li><strong>AI Stability</strong> — How can small changes in data or settings 
+          affect the outcomes of deep learning models, and how can we make them more predictable and trustworthy?</li>
+        <li><strong>Machine Unlearning</strong> — How can we allow AI systems to 
+          "forget" specific data when needed, helping protect privacy and meet new regulations without retraining from scratch?</li>
+        <li><strong>Adversarial Robustness</strong> — How can malicious or faulty data 
+          trick AI, and how can we design defenses that make models resistant to these attacks?</li>
+        <li><strong>Applications in Transportation</strong> — How can these AI techniques be applied to traffic forecasting, connected vehicles, and intelligent transportation systems to help cities manage mobility more safely and efficiently?</li>
+      </ul>
       <div class="row" style="margin-top:8px">
         <span class="tag badge-ai">AI Stability</span>
         <span class="tag badge-ai">Machine Unlearning</span>
         <span class="tag badge-ai">Adversarial Robustness</span>
-        <span class="tag badge-ai">Variational Inequalities</span>
-        <span class="tag badge-ai">Scalable Optimization</span>
-        <span class="tag badge-app">Trustworthy ITS</span>
+        <span class="tag badge-app">Trustworthy Transportation</span>
       </div>
     </section>
 
-    <!-- Research Focus: AI & Transportation -->
+    <!-- Research Focus -->
     <section id="interests" class="grid">
       <div class="card">
         <h3>Research Focus</h3>
@@ -126,26 +207,58 @@
       </div>
     </section>
 
-    <!-- Publications grouped by AI / Transportation -->
+    <!-- Publications -->
     <section class="card">
       <h3>Publications</h3>
       <ul class="list small pub">
+
         <li><span class="tag badge-ai">AI</span></li>
-        <li><u>Xin Wang</u>, Feilong Wang, Xuegang Jeff Ban. <em>Set-Valued Sensitivity Analysis of Deep Neural Networks.</em> AAAI 2025, 39(20): 21304–21311.</li>
-        <li><u>Xin Wang</u>, R. Tyrrell Rockafellar, et al. <em>Machine Unlearning of Traffic State Estimation and Prediction.</em> arXiv:2507.17984 (2025). Submitted to ISTTT.</li>
-        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, R. Tyrrell Rockafellar, et al. <em>Model-Targeted Data Poisoning Attacks against ITS Applications with Provable Convergence.</em> arXiv:2505.03966 (2025). Submitted to AAAI.</li>
+        <li>
+          <strong>Set-Valued Sensitivity Analysis of Deep Neural Networks</strong>
+          <a href="https://ojs.aaai.org/index.php/AAAI/article/view/31087" target="_blank" rel="noopener"><span class="tag badge-paper">Paper</span></a><br>
+          <u>Xin Wang</u>, Feilong Wang, Xuegang Jeff Ban. AAAI 2025, 39(20): 21304–21311.
+        </li>
+        <li>
+          <strong>Machine Unlearning of Traffic State Estimation and Prediction</strong>
+          <a href="https://arxiv.org/abs/2507.17984" target="_blank" rel="noopener"><span class="tag badge-paper">Paper</span></a><br>
+          <u>Xin Wang</u>, R. Tyrrell Rockafellar, et al. arXiv:2507.17984 (2025). Submitted to ISTTT.
+        </li>
+        <li>
+          <strong>Model-Targeted Data Poisoning Attacks against ITS Applications with Provable Convergence</strong>
+          <a href="https://arxiv.org/abs/2505.03966" target="_blank" rel="noopener"><span class="tag badge-paper">Paper</span></a><br>
+          <u>Xin Wang</u>, Feilong Wang, Yuan Hong, R. Tyrrell Rockafellar, et al. arXiv:2505.03966 (2025). Submitted to AAAI.
+        </li>
 
         <li><span class="tag badge-app">Transportation</span></li>
-        <li>Wang, Feilong, <u>Xin Wang</u>, Hong, Yuan, Rockafellar, R. Tyrrell, Ban, Xuegang Jeff. <em>Data poisoning attacks on traffic state estimation and prediction.</em> Transportation Research Part C, 168 (2024): 104577.</li>
-        <li>Wang, Feilong, <u>Xin Wang</u>, Ban, Xuegang Jeff. <em>Data poisoning attacks in intelligent transportation systems: A survey.</em> Transportation Research Part C, 165 (2024): 104750.</li>
-        <li>Feilong Wang, <u>Xin Wang</u>, Jeff Ban. <em>Infrastructure-enabled Defense Methods against Data Poisoning Attacks on Traffic State Estimation and Prediction.</em> TRC-30, 2025.</li>
-        <li><u>Xin Wang</u>, Feilong Wang, Yuan Hong, Xuegang Ban. <em>Transferability in Data Poisoning Attacks on Spatiotemporal Traffic Forecasting Models.</em> SSRN 4827065 (2024). Submitted to TR-C.</li>
+        <li>
+          <strong>Data poisoning attacks on traffic state estimation and prediction</strong>
+          <a href="https://doi.org/10.1016/j.trc.2024.104577" target="_blank" rel="noopener"><span class="tag badge-paper">Paper</span></a><br>
+          Wang, Feilong, <u>Xin Wang</u>, Hong, Yuan, Rockafellar, R. Tyrrell, Ban, Xuegang Jeff. Transportation Research Part C, 168 (2024): 104577.
+        </li>
+        <li>
+          <strong>Data poisoning attacks in intelligent transportation systems: A survey</strong>
+          <a href="https://doi.org/10.1016/j.trc.2024.104750" target="_blank" rel="noopener"><span class="tag badge-paper">Paper</span></a><br>
+          Wang, Feilong, <u>Xin Wang</u>, Ban, Xuegang Jeff. Transportation Research Part C, 165 (2024): 104750.
+        </li>
+        <li>
+          <strong>Infrastructure-enabled Defense Methods against Data Poisoning Attacks on Traffic State Estimation and Prediction</strong>
+          <a href="https://doi.org/10.1016/j.trc.2025.104800" target="_blank" rel="noopener"><span class="tag badge-paper">Paper</span></a><br>
+          Feilong Wang, <u>Xin Wang</u>, Jeff Ban. TRC-30, 2025.
+        </li>
+        <li>
+          <strong>Transferability in Data Poisoning Attacks on Spatiotemporal Traffic Forecasting Models</strong>
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4827065" target="_blank" rel="noopener"><span class="tag badge-paper">Paper</span></a><br>
+          <u>Xin Wang</u>, Feilong Wang, Yuan Hong, Xuegang Ban. SSRN 4827065 (2024). Submitted to TR-C.
+        </li>
+
       </ul>
     </section>
 
+    <!-- Talks -->
     <section class="card">
       <h3>Invited Talks & Guest Lectures</h3>
       <ul class="list small">
+        <li><strong>AAAI 2025 (Poster)</strong> — Set-Valued Sensitivity Analysis of Deep Neural Networks</li>
         <li><strong>ISTTT25</strong> — Data Poisoning Attacks on Traffic State Estimation and Prediction</li>
         <li><strong>TRB 2025</strong> — A Review of Data Poisoning Attacks in Intelligent Transportation Systems</li>
       </ul>
